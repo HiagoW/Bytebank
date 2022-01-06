@@ -1,9 +1,22 @@
-<!-- quando o evento aoTransferir for emitido no app-nova-transferencia, chama método transferir do app.component.ts -->
+<header>
+  <a routerLink="extrato">Bytebank</a>
+  <!-- routerLinkActive adiciona classe quando link estiver ativo -->
+  <a routerLink="nova-transferencia" routerLinkActive="ativo">Nova transferência</a>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+
+<!-- ANTES DE ROUTES:
+quando o evento aoTransferir for emitido no app-nova-transferencia, chama método transferir do app.component.ts
 <app-nova-transferencia
   (aoTransferir)="transferir($event)"
 ></app-nova-transferencia>
 
+<app-nova-transferencia></app-nova-transferencia>
+
 <app-extrato></app-extrato>
 
-<!-- passa transferências do app.component.ts para o extrato.component.ts (QUANDO NÃO TINHA O SERVICE)
+passa transferências do app.component.ts para o extrato.component.ts (QUANDO NÃO TINHA O SERVICE)
 <app-extrato [transferencias]="transferencias"></app-extrato> -->

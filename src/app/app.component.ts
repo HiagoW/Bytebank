@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'bytebank';
@@ -13,7 +13,8 @@ export class AppComponent {
 
   }
 
-  transferir($event){
-    this.service.adicionar($event);
-  }
+  //Não precisa mais, pois o service é usado direto no nova-transferencia para chamar o post http
+  // transferir($event){
+  //  this.service.adicionar($event);
+  // }
 }
